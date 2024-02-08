@@ -49,7 +49,6 @@ function App() {
         <button>Write</button>
       </Link>
 
-      <button>Edit</button>
       <button>Delete</button>
     </div>
   );
