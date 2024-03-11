@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 
 app.get("/list", (req, res) => {
   const sqlQuery =
-    "SELECT BOARD_ID, BOARD_TITLE, REGISTER_ID, DATE_FORMAT(REGISTER_DATE, '%Y-%m-%d') AS REGISTER_DATE FROM BOARD;";
+    "SELECT BOARD_ID, BOARD_TITLE, REGISTER_ID, DATE_FORMAT(REGISTER_DATE, '%Y-%m-%d %a %T') AS REGISTER_DATE FROM BOARD;";
   db.query(sqlQuery, (err, result) => {
     res.send(result);
   });
